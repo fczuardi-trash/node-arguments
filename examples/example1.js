@@ -3,7 +3,7 @@ var arguments = require('../index');
 arguments.parse([
      {'name': /^(-h|--help)$/, 'expected': null, 'callback': printHelp}
     ,{'name': /^(-b|--beatle)$/, 'expected': /^(george|paul|ringo|john)$/i, 'callback': setupBeatle}
-    ,{'name': /^(-v|--volume)$/, 'expected': /^([0-9]|1[0-1])$/i, 'callback': setupVolume}
+    ,{'name': /^(-v|--volume)$/, 'expected': /^([0-9]|1[0-1])$/, 'callback': setupVolume}
   ], main, invalidArgument);
 
 function printHelp(end){
