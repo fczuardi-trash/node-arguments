@@ -44,7 +44,7 @@ this.parse = function(valid_arguments, afterParseCallback, invalidArgumentCallba
         invalid_syntax = false;
         if (valid_argument['expected']){
           i++;
-          if (!valid_argument['expected'].test(next_argument)){ 
+          if ((!next_argument)||(!valid_argument['expected'].test(next_argument))){ 
             invalidArgumentCallback(next_argument ? next_argument : argument, (next_argument==undefined));
             break;
           }
