@@ -29,7 +29,10 @@ this.parse = function(valid_arguments, afterParseCallback, invalidArgumentCallba
       ,callbacks_finished_count = 0
       ,args = process.argv.slice(2);
 
-  invalidArgumentCallback ? invalidArgumentCallback : invalidArgument;  
+  invalidArgumentCallback = invalidArgumentCallback ? 
+                            invalidArgumentCallback : defaultInvalidArgumentCallback;
+  afterParseCallback =  afterParseCallback ? 
+                        afterParseCallback : defaultAfterParseCallback;
   if (args.length == 0) { afterParseCallback(); return true; }
   for (i=0; i<args.length; i++){
     invalid_syntax = true;
@@ -66,4 +69,11 @@ this.parse = function(valid_arguments, afterParseCallback, invalidArgumentCallba
       }
     }, item['argument']);
   });
+}
+
+var defaultAfterParseCallback = function(){
+  // console.log('[node-arguments] : All callbacks related with command line arguments finished executing.');
+}
+var defaultInvalidArgumentCallback = function(arg, value_missing){
+  console.log('[node-arguments] : the argument %s %s', arg, (value_missing?'expects a value':'is not valid.'))
 }
