@@ -1,0 +1,11 @@
+{
+  "name"          : "arguments",
+  "description"   : "Yet Another command-line parser for node.js",
+  "url"           : "http://github.com/fczuardi/node-arguments",
+  "keywords"      : ["argv", "getopt", "command-line"],
+  "author"        : "Fabricio C Zuardi",
+  "contributors"  : ["Vitor Calejuri <ondeosfrangosnaotemvez@gmail.com>"],
+  "version"       : "1.0.0",
+  "main"          : "./index",
+  "engines"       : { "node": ">= 0.1.93" }
+}
