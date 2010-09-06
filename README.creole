@@ -11,7 +11,7 @@ $ npm install arguments
 
 == Usage
 {{{
-var arguments = require('./path/to/node-arguments');
+var arguments = require('arguments');
 
 arguments.parse([
      {'name': /^(-h|--help)$/, 'expected': null, 'callback': printHelp}
