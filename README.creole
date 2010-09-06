@@ -1,6 +1,14 @@
 = Node Arguments
 A simple command line arguments parser for node.js... Yes, another! :)
 
+== Installation
+
+You can use npm to install node-arguments
+
+{{{
+$ npm install arguments    
+}}}
+
 == Usage
 {{{
 var arguments = require('./path/to/node-arguments');
